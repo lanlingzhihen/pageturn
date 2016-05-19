@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            var version = parseFloat(RegExp.$1)
+            if (version > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 640
+                document.write('<meta name="viewport" content="width=640,minimum-scale=' + phoneScale + ',maximum-scale=' + phoneScale + ',target-densitydpi=device-dpi">')
+            } else {
+                document.write('<meta name="viewport" content="width=640,target-densitydpi=device-dpi">')
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=640,user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+        }
+    </script>
+    <style>
+        body { background-color: #000; color: #FFF; }
+        .container, .loading { background-color: #000; }
+    </style>
+    <link rel="stylesheet" href="css/index.css">
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <div id="pages" class="pages" >
+        <div class="page p1"></div>
+        <div class="page p2"></div>
+        <div class="page p3"></div>
+        <div class="page p4"></div>
+        <div class="page p5"></div>
+        <div class="page p6"></div>
+        <div class="page p7"></div>
+    </div>
+ </div>
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/pageturn.js"></script>
+
+</body>
+</html>
